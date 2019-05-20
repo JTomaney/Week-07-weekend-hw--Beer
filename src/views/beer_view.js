@@ -10,11 +10,11 @@ BeerView.prototype.render = function () {
   const name = this.createBeerName()
   beerContainer.appendChild(name)
 
-  // const meaning = this.createMunroMeaning()
-  // beerContainer.appendChild(meaning)
-  //
-  // const height = this.createMunroHeight()
-  // beerContainer.appendChild(height)
+  const tagLine = this.createBeerTagline()
+  beerContainer.appendChild(tagLine)
+
+  const description = this.createBeerDescription()
+  beerContainer.appendChild(description)
 
 
 
@@ -29,19 +29,19 @@ BeerView.prototype.createBeerName = function () {
   return name
 };
 
-// BeerView.prototype.createMunroMeaning = function () {
-//   const meaning = document.createElement('p')
-//   meaning.classList.add('beer-meaning')
-//   meaning.textContent = this.beer.meaning
-//   return meaning
-// };
-//
-// BeerView.prototype.createMunroHeight = function () {
-//   const height = document.createElement('p')
-//   height.classList.add('beer-height')
-//   height.textContent = `Height (m):${this.beer.height}`
-//   return height
-// };
+BeerView.prototype.createBeerTagline = function () {
+  const tagLine = document.createElement('p')
+  tagLine.classList.add('beer-tagLine')
+  tagLine.textContent = this.beer.tagLine
+  return tagLine
+};
+
+BeerView.prototype.createBeerDescription = function () {
+  const description = document.createElement('p')
+  description.classList.add('beer-description')
+  description.textContent = `Description:${this.beer.description}`
+  return description
+};
 
 
 

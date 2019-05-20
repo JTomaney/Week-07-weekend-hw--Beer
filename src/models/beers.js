@@ -11,8 +11,6 @@ Beers.prototype.getData = function () {
   .then( (data ) => {
     this.beers = data
     PubSub.publish('Beers:beers-data-ready', this.beers);
-    // const regions = this.getRegionNames(this.munros)
-    // PubSub.publish('Munros:unique-regions', regions)
   })
 
 };
